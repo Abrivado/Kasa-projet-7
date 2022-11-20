@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css';
+import './styles/index.css';
 
 import Home from './pages/Home';
 import About from './pages/About';

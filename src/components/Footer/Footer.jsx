@@ -5,10 +5,11 @@ function Footer() {
     return (  
             <footer>
             <div>
-              <div>
+              <div className='footer-logo'>
+              <img src={require("../../assets/images/logo-footer.png")} alt="Logo footer"/>
               </div>
-              <div className="footer__imgText">
-              <h4>© 2020 Kasa. All rights reserved</h4>
+              <div className="footer-text">
+              <p>© 2020 Kasa. All rights reserved</p>
               </div>
             </div>
           </footer>
