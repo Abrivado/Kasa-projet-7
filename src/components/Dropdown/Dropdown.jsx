@@ -1,13 +1,12 @@
 import React from "react";
 import { useState } from "react";
 
-function Dropdown({ content }) {
+function Dropdown({ title,content }) {
   const [open, setOpen] = useState(false);  
 
   return (
     <div className="dropdown">
-      <div className="dropdown__header">
-        <div className="dropdown__title">
+         <div className="dropdown-title"> {title}
             <div className="dropdown-button"></div>
             <div
               className={`dropDown__arrow ${open}`}
@@ -16,7 +15,6 @@ function Dropdown({ content }) {
               <img className="dropDown__arrowImg" src={require("../../assets/images/fleche-bas.png")} alt="Flèche fermé bas"/>
             </div>
         </div>
-      </div>
       {open && <div className="dropdown__content">{content}</div>}
     </div>
   );
