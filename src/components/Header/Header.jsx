@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom'
 function Header() {
     return (
         <header>
-            <div className="logo">
+            <div className="header-logo">
            <img src={require("../../assets/images/logo-header.png")} alt="Logo header"/>
         </div>
         <nav>
-            <Link to="/">Accueil</Link>
-            <Link to="/about">A propos</Link>
+            <Link to="/" className="header-nav">Accueil</Link>
+            <Link to="/about" className="header-nav">A propos</Link>
         </nav>
         </header>
     )
