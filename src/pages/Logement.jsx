@@ -12,6 +12,7 @@ function Logement () {
     const id = useParams(0);
     const logementData = data_logement.find((product) => product.id === id)
     if (!logementData) return <NotFound />
+    
 
 }
 

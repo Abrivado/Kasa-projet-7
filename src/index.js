@@ -7,12 +7,12 @@ import Footer from "./components/Footer/Footer";
 
 ReactDOM.render(
   <BrowserRouter>
-    <div className="index__template">
+    <div className="index-general">
       <Header />
-      <div className="index__content">
+      <div className="index-contenu">
         <AppRoutes />
       </div>
-      <div className="index__footer">
+      <div className="index-footer">
         <Footer />
       </div>
     </div>
