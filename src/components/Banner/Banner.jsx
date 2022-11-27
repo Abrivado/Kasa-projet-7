@@ -1,11 +1,11 @@
-import React from "react";
+import "../../styles/index.css" 
 
-function Banner() {
+function Banner({text}) {
   return (
     <div className="home">
-        <div className="banniere">
+        <div className="home-banniere">
            <img src={require("../../assets/images/banniere.png")} alt="Bannière accueil"/>
-           <span>Chez vous, partout ailleurs</span>
+           <span className="banniere-text">{text}</span>
         </div>
     </div>
   );

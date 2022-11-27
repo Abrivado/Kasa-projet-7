@@ -2,6 +2,7 @@ import React from 'react';
 import data_logement from "../assets/data_logement/logements.json"
 import { useParams } from "react-router-dom";
 import NotFound from "../components/Error/error"
+import "../styles/index.css" 
 
 
 

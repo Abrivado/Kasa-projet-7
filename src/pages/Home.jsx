@@ -4,6 +4,7 @@ import Card from "../components/Card/Card";
 import data_logement from "../assets/data_logement/logements.json"
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
+import "../styles/index.css" 
 
 
 
@@ -11,8 +12,8 @@ import { Link } from 'react-router-dom';
 function Home() {
     return (
         <div className='home'>
-            <Banner/>
-            <div className="home-gallery">
+            <Banner text={"Chez vous, partout et ailleurs"}/>
+            <div className="home-logement">
 
               {data_logement.map((logement) => (
 
