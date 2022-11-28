@@ -15,7 +15,7 @@ html {
 }
 
 .index-contenu {
-  padding: 0px 100px 300px 100px;
+  padding: 0px 100px 150px 100px;
 }
 
 body {
@@ -284,5 +284,79 @@ nav {
   }
 }
 
+
+
+                                   /*************  B A N N I E R E  *************/
+
+.banniere-home {
+  position: relative;
+  height: 223px;
+  margin-bottom: 43px;
+}
+
+.banniere-img {
+  position: absolute;
+  border-radius: 25px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.banniere-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  border-radius: 25px;
+  height: 100%;
+  opacity: 0.3;
+}
+
+.banniere-text {
+  color: #ffffff;
+  font-family: "Montserrat";
+  width: 705px;
+  font-weight: 500;
+  font-size: 48px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 970px) {
+  .banniere-home {
+    position: relative;
+    height: 160px;
+    margin-bottom: 43px;
+  }
+
+  .banniere-text {
+    font-size: 36px;
+    left: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banniere-home {
+    position: relative;
+    height: 111px;
+    margin-bottom: 43px;
+  }
+
+  .banniere-text {
+    font-size: 24px;
+    left: 35%;
+  }
+
+  .banniere-img {
+    border-radius: 10px;
+  }
+
+  .banniere-gradient {
+    border-radius: 10px;
+  }
+}
 
  

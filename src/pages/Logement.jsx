@@ -9,16 +9,32 @@ import "../styles/index.css"
 import "../styles/index.css"
 
 
-function Logement () {
-    const id = useParams(0);
-    const logementData = data_logement.find((product) => product.id === id)
-    if (!logementData) return <NotFound />
+// function Logement () {
+//     const id = useParams(0);
+//     const logementData = data_logement.find((product) => product.id === id)
+//     if (!logementData) return <NotFound />
     
 
-}
+// }
 
 
-export default Logement
+// export default Logement
+
+function Logement() {
+    const account = useParams().id;
+    console.log(account)
+  
+    const obj = data_logement.find((c) => c.id === account)
+  
+    //Mise à jour après soutenance
+    if (obj === undefined) {
+      return <NotFound />
+    } 
+    return (
+      <div> jjjhhjhh </div>)
+  }
+  
+    export default Logement
 
 
 

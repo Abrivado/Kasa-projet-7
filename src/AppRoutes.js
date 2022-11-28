@@ -1,32 +1,21 @@
-import React from 'react';
-import './styles/index.css';
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import NotFound from './components/Error/error'
+import About from './pages/About'
+import Logement from './pages/Logement'
 
-import Home from './pages/Home';
-import About from './pages/About';
-import NotFound from './components/Error/error';
-import Logement from './pages/Logement';
-
-import { Route, Routes } from 'react-router-dom';
-
-
-function AppRoutes(){
-
-return (
-
-    <div>
-  
-  <Routes>  
-    <Route path="/" element={<Home />} />
-    <Route path="/about" element={<About />} />
-    <Route path="/location/:id" element={<Logement />} />
-    <Route path='*' element={<NotFound />}/>
-  </Routes>
-
-  </div>
+function AppRoutes() {
+  document.title = 'Kasa - Location de maison et appartements'
+  return (
+    <div className="AppRoutes">
+      <Routes>
+        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/logement/:id" element={<Logement />} />
+      </Routes>
+    </div>
   )
 }
 
-
-export default AppRoutes;
-
-
+export default AppRoutes
