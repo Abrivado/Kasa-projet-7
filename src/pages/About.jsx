@@ -8,7 +8,7 @@ function About() {
         <section>
    
         <div className='banniere'>
-            <img src={require("../assets/images/banner-about.png")} alt="Bannière à propos"/>
+            <img className='banniere-img' src={require("../assets/images/banner-about.png")} alt="Bannière à propos"/>
         </div>
 
         <div className="about-dropdown">
