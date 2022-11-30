@@ -6,6 +6,7 @@ import Dropdown from '../components/Dropdown/Dropdown';
 import Host from '../components/Host/Host';
 import Rating from '../components/Rating/Rating';
 import Tags from '../components/Tags/Tags';
+import Carousel from '../components/Carousel/Carousel';
 import "../styles/index.css"
 
 
@@ -14,14 +15,15 @@ function Logement() {
     console.log(account)
     const obj = data_logement.find((product) => product.id === account)
 
-    const { title, location, rating, host, description, equipments } = obj || {};
+    const { title, location, rating, host, description, equipments, pictures } = obj || {};
 
       if (obj === undefined) {
       return <NotFound />
     } 
     return (
-        <div className="logement">
-        <div className="logement-content">
+        <div className="logement">            
+        <Carousel slider={pictures} />        
+        <div className="logement-contenu">
           <div className="logement-infos">
             <div className="logement-host">
               <div className="logement-titre-location">
