@@ -6,7 +6,7 @@ function Rating({ rating }) {
   return (
     <div className="rating">
       {stars.map((star, i) =>    // pour trouver à cb d'étoile est noté ce logement sur la data
-        rating >= star ? (
+        rating >= star ? ( // filtre etoile rouge et tout ce qui n'est pas rouge sera gris
           <div className="rating-etoile-rouge" key={`${star}-${i}`}>  
             <img
               className="rating-etoile"
@@ -16,7 +16,7 @@ function Rating({ rating }) {
             />
           </div>
         ) : (  // les étoiles manquant seront grises
-          <div className="rating-etoile-grise"> 
+          <div className="rating-etoile-grise" key={`${star}-${i}`}> 
             <img
               className="rating-etoile"
               src={require("../../assets/images/etoile-grise.png")}

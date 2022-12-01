@@ -1,11 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import AppRoutes from "./AppRoutes";
 import { BrowserRouter } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
-ReactDOM.render(
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
   <BrowserRouter>
     <div className="index-general">
       <Header />
@@ -17,5 +19,4 @@ ReactDOM.render(
       </div>
     </div>
   </BrowserRouter>,
-  document.getElementById("root")
 );

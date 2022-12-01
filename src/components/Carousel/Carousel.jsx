@@ -6,7 +6,7 @@ function Carousel({ slider }) {   // useState sert à créer un état et le sauv
   const length = slider.length;  // length permet de répertorier le nombre d'image que possege un logement // slider regroupe toutes les images du carousel
 
   const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);  // formule qui permet de passer à la slide suivante
+    setCurrent(current === length - 1 ? 0 : current + 1);  // formule qui permet de passer à la slide suivante // length-1 est pour connaitre la longueur du slider
   };
 
   const prevSlide = () => {
@@ -26,7 +26,7 @@ function Carousel({ slider }) {   // useState sert à créer un état et le sauv
         );
       })}
 
-      {length > 1 && (
+      {length > 1 && (  // les fleches s'affichent si il y'a plus d'une image
         <div>
           <img
             className="slider-fleche-gauche"

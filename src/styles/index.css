@@ -407,13 +407,12 @@ nav {
 .banniere-text {
   color: #ffffff;
   font-family: "Montserrat";
-  width: 705px;
   font-weight: 500;
   font-size: 48px;
-  left: 50%;
+  left: 43%;
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);    /* Pour que le texte apparaisse sur l'image */
+  transform: translate(-40%, -50%);    /* Pour que le texte apparaisse sur l'image */
 }
 
 @media screen and (max-width: 970px) {
@@ -425,7 +424,7 @@ nav {
 
   .banniere-text {
     font-size: 36px;
-    left: 60%;
+    left: 48%;
   }
 }
 
@@ -438,7 +437,8 @@ nav {
 
   .banniere-text {
     font-size: 24px;
-    left: 35%;
+    left: 32%;
+    width: 217px;
   }
 
   .banniere-img {

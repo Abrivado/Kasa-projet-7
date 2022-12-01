@@ -2,7 +2,6 @@ import React from 'react';
 import Banner from "../components/Banner/Banner";
 import Card from "../components/Card/Card";
 import data_logement from "../assets/data_logement/logements.json"
-import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
 import "../styles/index.css" 
 
@@ -37,10 +36,5 @@ function Home() {
     )
 }
 
-Home.propTypes = {           // propTypes sert à sécuriser la composante Card
-    id: PropTypes.string,
-    title: PropTypes.string,
-    cover: PropTypes.string,
-}
 
 export default Home;

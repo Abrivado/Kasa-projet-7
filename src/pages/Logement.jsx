@@ -16,9 +16,9 @@ function Logement() {
 
     const { title, location, rating, host, description, pictures } = obj || {}; // récup chaque donnée nécéssaire de notre fichier json
 
-    const equipments = obj.equipments.map((equip) => {
-        return <li className="logement-equipement">{equip}</li>;  // cette div sert à ce que les équipements des logements soient affichés en liste
-    })
+     const equipments = obj.equipments.map((equip) => {
+         return <li key={`${equip}-${obj}`} className="logement-equipement">{equip}</li>;  // cette div sert à ce que les équipements des logements soient affichés en liste
+     })
 
       if (obj === undefined) {   // si l'id ne match pas mes datas, ça renvoi les users sur le page 404
       return <NotFound />
@@ -46,7 +46,7 @@ function Logement() {
                 <Dropdown title="Description" content={description} />
               </div>
               <div className="logement-equipement-contenu">
-                <Dropdown title="Équipement" content ={equipments}/>
+                <Dropdown title="Équipement" content ={equipments} />
               </div>
             </div>
           </div>
