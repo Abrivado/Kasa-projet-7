@@ -520,3 +520,201 @@ nav {
     right: 1%;
   }
 }
+
+
+
+                                    /*************  P A G E   L O G E M E N T  *************/
+.logement-padding {
+  padding-top: 24px;
+}
+
+.logement-titre {
+  margin: 0px;
+  padding-right: 50px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 51px;
+  display: flex;
+  flex-direction: row;
+  color: #ff6060;
+}
+
+.logement-ville {
+  margin: 0px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  display: flex;
+  align-items: flex-end;
+  color: #ff6060;
+}
+
+.logement-host {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logement-host-etoiles {
+  display: flex;
+  flex-direction: column;
+}
+
+.logement-tags {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 20px 0 24px 0;
+}
+
+.logement-dropdown {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  padding-top: 30px;
+}
+
+li {
+  list-style-type: none;   /* pour retirer les points de la liste */
+}
+
+.logement-description-contenu {
+  width: 100%;
+}
+
+.logement-equipement-contenu {
+  width: 100%;
+}
+
+@media screen and (max-width: 968px) {
+  .logement-dropdown {
+    padding-top: 16.5px;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logement-titre {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .logement-ville {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .logement-host {
+    flex-direction: column;
+  }
+
+  .logement-host-etoiles {
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .logement-tags {
+    padding: 10px 0 16.5px 0;
+    width: 100%;
+  }
+}
+
+                                    /*************  H O S T  *************/
+
+
+.host {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+.host-picture {
+  height: 64px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.host-name {
+  display: flex;
+  width: 93px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25.67px;
+  text-align: right;
+  padding-right: 10px;
+  color: #ff6060;
+}
+
+
+@media screen and (max-width: 768px) {
+  .host-picture {
+    height: 32px;
+  }
+
+  .host-name {
+    width: 60px;
+    font-size: 12px;
+    line-height: 17.11px;
+  }
+}
+
+                                    /*************  R A T I N G  *************/
+
+.rating {
+  display: flex;
+  gap: 10px;
+}
+
+.rating-etoile {
+  height: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .rating {
+    gap: 5px;
+  }
+
+  .rating-etoile {
+    height: 15px;
+  }
+}
+
+                                    /*************  T A G S  *************/
+
+.tag-container {
+  display: inline-flex;
+  padding: 3px 30px;
+  border-radius: 10px;
+  background: #ff6060;
+}
+
+.tag-contenu {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19.96px;
+  text-align: center;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .tag-container {
+    padding: 2px 0px;
+    border-radius: 5px;
+  }
+
+  .tag-contenu {
+    font-size: 10px;
+    line-height: 14.26px;
+    padding: 0 15px;
+  }
+}

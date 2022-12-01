@@ -11,35 +11,34 @@ import "../styles/index.css"
 
 
 function Logement() {
-    const account = useParams().id;
-    console.log(account)
-    const obj = data_logement.find((product) => product.id === account)
+    const account = useParams().id;  // pour récup l'id du produit
+    const obj = data_logement.find((product) => product.id === account) // pour chercher l'id correspondante dans le fichier json
 
-    const { title, location, rating, host, description, equipments, pictures } = obj || {};
+    const { title, location, rating, host, description, pictures } = obj || {}; // récup chaque donnée nécéssaire de notre fichier json
 
-      if (obj === undefined) {
+    const equipments = obj.equipments.map((equip) => {
+        return <li className="logement-equipement">{equip}</li>;  // cette div sert à ce que les équipements des logements soient affichés en liste
+    })
+
+      if (obj === undefined) {   // si l'id ne match pas mes datas, ça renvoi les users sur le page 404
       return <NotFound />
     } 
     return (
-        <div className="logement">            
+        <div>            
         <Carousel slider={pictures} />        
-        <div className="logement-contenu">
-          <div className="logement-infos">
+        <div>
+          <div className="logement-padding">
             <div className="logement-host">
-              <div className="logement-titre-location">
+              <div>
                 <h1 className="logement-titre">{title}</h1>  
-                <p className="logement-location">{location}</p>
+                <p className="logement-ville">{location}</p>
                 <div className="logement-tags">
                 <Tags tags={obj?.tags}/>
                 </div>
               </div>
-              <div className="logement-host-stars">
+              <div className="logement-host-etoiles">
               <Host host={host} />
-              <Rating rating={rating} />
-
-
-
-                
+              <Rating rating={rating} />                
               </div>
             </div>
             <div className="logement-dropdown">

@@ -1,4 +1,6 @@
 import React from "react";
+import "../../styles/index.css";
+
 
 
 function Card({ id, title, cover }) {

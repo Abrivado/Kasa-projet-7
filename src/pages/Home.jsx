@@ -15,7 +15,7 @@ function Home() {
             <Banner text={"Chez vous, partout et ailleurs"}/>
             <div className="home-logement">
 
-              {data_logement.map((logement) => (
+              {data_logement.map((logement) => (   // pour créer un tableau de tous les logements du fichier json
 
             <Link
             className="home-link"
