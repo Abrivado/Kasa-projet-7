@@ -15,11 +15,11 @@ function Carousel({ slider }) {   // useState sert à créer un état et le sauv
 
   return (
     <section className="slider">
-      {slider.map((picture, i) => {     // le .map sert à retourner un tableau de slide(pictures) à partir du tableau [current, setCurrent] de useState
+      {slider.map((picture, i) => {     // le .map sert à retourner un tableau de slide(toutes les pictures du carousel) 
         return (
  
           <div className={i === current ? "slide-active" : "slide"} key={i}>  
-            {i === current && (   //  l'img affichée basculera en div slide active lorsque que l'image sera sélectionnée
+            {i === current && (   //  l'img affichée (current) basculera en slide active lorsque que l'image sera sélectionnée
               <img className="slider-image" src={picture} alt="Gallerie logement"/>
             )}
           </div>
@@ -41,7 +41,9 @@ function Carousel({ slider }) {   // useState sert à créer un état et le sauv
             alt="Fleche de droite"   
             onClick={nextSlide}       // devra montrer la slide suivante au clic
           />
+          <div className="slider-numero">{current +1 }/{slider.length}</div>
         </div>
+        
       )}
     </section>
   );

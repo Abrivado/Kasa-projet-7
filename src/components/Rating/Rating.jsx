@@ -15,7 +15,7 @@ function Rating({ rating }) {
               alt="Etoile rouge"
             />
           </div>
-        ) : (  // les étoiles manquant seront grises
+        ) : (  // les étoiles manquantes seront grises
           <div className="rating-etoile-grise" key={`${star}-${i}`}> 
             <img
               className="rating-etoile"

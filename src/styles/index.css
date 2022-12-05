@@ -80,7 +80,7 @@ nav {
 }
 
 .header-nav:hover {
-  border-bottom: 2px solid #ff6060;
+  border-bottom: 2px solid #ff6060;  /*  le soulignement rouge apparait uniquement au survol */
 }
 
 @media screen and (max-width: 968px) {
@@ -335,7 +335,7 @@ nav {
 
 .dropdown-fleche-img.true {
   justify-content: start;
-  transform: rotateX(180deg);
+  transform: rotateX(180deg);    /* pour tourner la fleche lorsqu'on ouvre le depliant dropdown*/
 }
 
 .dropdown-contenu {
@@ -484,6 +484,17 @@ nav {
   flex-direction: row;
 }
 
+.slider-numero {
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.67px;
+  color : white;
+  position : absolute;
+  left : 50%;
+  bottom : 7%;
+}
+
 @media screen and (max-width: 968px) {
   .slider {
     height: 225px;
@@ -500,6 +511,10 @@ nav {
 
   .slider-fleche-droite {
     top: 35%;
+  }
+
+  .slider-numero{
+    display: none;
   }
 }
 
